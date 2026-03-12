@@ -1,0 +1,36 @@
+body{
+    background-color: #E6E6FA;
+    font-family: 'Courier New', Courier, monospace;}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+h2{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+p{
+    text-indent: 40px;
+    font-size: 18px;
+    text-align: left;
+    color: red;
+}
+
+
+#titulo{
+    text-align: center;
+    font-size: 50px;
+    color: #ff0000;
+}
+
+.atividade{
+    text-align: center;
+    font-size: 10px;
+    color: #000000;
+}
