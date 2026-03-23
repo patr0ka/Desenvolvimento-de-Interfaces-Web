@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ccc;
+}
+
+.cabecalho {
+    background-image: url(Imagens/pexels-codioful-7130503.jpg);
+    height: 250px;
+    background-size: cover;
+    background-position: right center;
+    padding-top: 1px;
+}
+
+.cabecalho h1 {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cabecalho-conteudo {
+    margin: 1px auto 0;
+    width: 80%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.cabecalho-conteudo p {
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 50%;
+    font-weight: bold;
+    padding: 14px;
+}
+
+
+main {
+    width: 80%;
+    margin: auto;
+    max-width: 860px;
+}
+
+article {
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+article h2 {
+    border-bottom: 2px solid #ccc;
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 0;
+}
+
+
+article ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+article ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.rodape {
+    color: black;
+    text-align: left;
+    letter-spacing: 2px;
+}
