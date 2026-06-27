@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta de Moedas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Painel de moedas</p>
+          <h1>Cotação em tempo real</h1>
+          <p class="hero-text">
+            Acompanhe Bitcoin, Euro e Dólar, converta valores e visualize a variação
+            dos últimos 15 dias.
+          </p>
+        </div>
+      </header>
+
+      <section class="quotes-grid" aria-label="Cotações atuais">
+        <article class="card quote-card">
+          <div class="card-title">
+            <span class="dot bitcoin"></span>
+            <h2>Bitcoin</h2>
+          </div>
+          <p class="value" id="btc-value">Carregando...</p>
+          <p class="variation" id="btc-variation">--</p>
+        </article>
+
+        <article class="card quote-card">
+          <div class="card-title">
+            <span class="dot euro"></span>
+            <h2>Euro</h2>
+          </div>
+          <p class="value" id="eur-value">Carregando...</p>
+          <p class="variation" id="eur-variation">--</p>
+        </article>
+
+        <article class="card quote-card">
+          <div class="card-title">
+            <span class="dot dollar"></span>
+            <h2>Dólar</h2>
+          </div>
+          <p class="value" id="usd-value">Carregando...</p>
+          <p class="variation" id="usd-variation">--</p>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="card converter-card">
+          <h2>Conversor de moedas</h2>
+          <form id="converter-form" class="converter-form">
+            <label>
+              <span>Valor</span>
+              <input type="number" id="amount" value="1" min="0" step="0.01" />
+            </label>
+
+            <label>
+              <span>De</span>
+              <select id="from-currency">
+                <option value="BRL">Real (BRL)</option>
+                <option value="USD">Dólar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="BTC">Bitcoin (BTC)</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Para</span>
+              <select id="to-currency">
+                <option value="BRL">Real (BRL)</option>
+                <option value="USD">Dólar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="BTC">Bitcoin (BTC)</option>
+              </select>
+            </label>
+
+            <button type="submit">Converter</button>
+          </form>
+
+          <div class="result-box" id="conversion-result">Resultado aparecerá aqui</div>
+        </article>
+
+        <article class="card chart-card">
+          <div class="card-header">
+            <h2>Variação dos últimos 15 dias</h2>
+            <p>Valores em reais (BRL)</p>
+          </div>
+          <div class="chart-filters">
+            <button class="filter-btn active" data-currency="USD">Dólar</button>
+            <button class="filter-btn" data-currency="EUR">Euro</button>
+            <button class="filter-btn" data-currency="BTC">Bitcoin</button>
+          </div>
+          <canvas id="history-chart"></canvas>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
